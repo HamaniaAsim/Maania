@@ -44,43 +44,43 @@
 
       <div class="platters-grid">
 
-        <div class="platter-card reveal">
+        <div class="platter-card reveal" onclick="openLightbox('large-platter.jpeg', 'Large Platter', 'A generous spread featuring hummus, sandwiches, and wraps — ideal for parties, dawats, and lunch gatherings.')">
           <img src="large-platter.jpeg" alt="Large Platter" class="platter-card-img" />
           <div class="platter-card-body">
             <span class="platter-size-badge">Party · 10–15 pax</span>
             <h3>Large Platter</h3>
             <p>A generous spread featuring hummus, sandwiches, and wraps — ideal for parties, dawats, and lunch gatherings.</p>
-            
+            <span style="font-size:0.8rem; color:var(--teal); font-weight:600; margin-top:0.5rem; display:block;">🔍 Tap to view full image</span>
           </div>
         </div>
 
-        <div class="platter-card reveal">
+        <div class="platter-card reveal" onclick="openLightbox('cheese-cracker-platter.jpeg', 'Cheese &amp; Cracker Platter', 'A beautifully arranged selection of cheeses and crackers — elegant, easy, and perfect for entertaining.')">
           <img src="cheese-cracker-platter.jpeg" alt="Cheese and Cracker Platter" class="platter-card-img" />
           <div class="platter-card-body">
             <span class="platter-size-badge">Tea-Time · 6–8 pax</span>
             <h3>Cheese &amp; Cracker Platter</h3>
             <p>A beautifully arranged selection of cheeses and crackers — elegant, easy, and perfect for entertaining.</p>
-            
+            <span style="font-size:0.8rem; color:var(--teal); font-weight:600; margin-top:0.5rem; display:block;">🔍 Tap to view full image</span>
           </div>
         </div>
 
-        <div class="platter-card reveal">
+        <div class="platter-card reveal" onclick="openLightbox('chana-chaat-trifle.jpeg', 'Chana Chaat Trifle', 'A showstopping layered chana chaat trifle — tangy, fresh, and served in style. A guaranteed crowd-pleaser.')">
           <img src="chana-chaat-trifle.jpeg" alt="Chana Chaat Trifle" class="platter-card-img" />
           <div class="platter-card-body">
             <span class="platter-size-badge">Party · 8–12 pax</span>
             <h3>Chana Chaat Trifle</h3>
             <p>A showstopping layered chana chaat trifle — tangy, fresh, and served in style. A guaranteed crowd-pleaser.</p>
-            
+            <span style="font-size:0.8rem; color:var(--teal); font-weight:600; margin-top:0.5rem; display:block;">🔍 Tap to view full image</span>
           </div>
         </div>
 
-        <div class="platter-card reveal">
+        <div class="platter-card reveal" onclick="openLightbox('desi-thaal.jpeg', 'Desi Thaal', 'A hearty desi spread with all your favourites — the kind of thaal that makes every gathering feel like home.')">
           <img src="desi-thaal.jpeg" alt="Desi Thaal" class="platter-card-img" />
           <div class="platter-card-body">
             <span class="platter-size-badge">Party · 10–15 pax</span>
             <h3>Desi Thaal</h3>
             <p>A hearty desi spread with all your favourites — the kind of thaal that makes every gathering feel like home.</p>
-            
+            <span style="font-size:0.8rem; color:var(--teal); font-weight:600; margin-top:0.5rem; display:block;">🔍 Tap to view full image</span>
           </div>
         </div>
 
@@ -106,6 +106,34 @@
   <p>Made with <span>♥</span> by <strong style="color:rgba(255,255,255,0.8);">Maània</strong> &nbsp;·&nbsp; DHA Phase 6, Lahore &nbsp;·&nbsp; <a href="mailto:maaniabysmh@gmail.com">maaniabysmh@gmail.com</a></p>
 </footer>
 
+<!-- LIGHTBOX -->
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+    <div class="lightbox-caption">
+      <h3 id="lightbox-title"></h3>
+      <p id="lightbox-desc"></p>
+    </div>
+  </div>
+</div>
+
 <script src="script.js"></script>
+<script>
+function openLightbox(src, title, desc) {
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox-title').textContent = title;
+  document.getElementById('lightbox-desc').textContent = desc;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox(e) {
+  if (!e || e.target === document.getElementById('lightbox') || e.target.classList.contains('lightbox-close')) {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(e); });
+</script>
 </body>
 </html>
