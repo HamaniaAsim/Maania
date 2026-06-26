@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maània — Home for Desserts · Home for Food</title>
+  <meta name="description" content="Maània is a home-based food brand from DHA Phase 6, Lahore, offering homemade dishes, platters, cakes, and more — made with love." />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Replace the line below with your actual favicon path -->
+  <!-- <link rel="icon" href="images/favicon.png" type="image/png" /> -->
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <a href="index.html" class="logo-wrap">
+    <span class="logo-name">Maània</span>
+    <span class="logo-slogan">— home for desserts · home for food —</span>
+  </a>
+  <button class="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- ===== NAV OVERLAY ===== -->
+<nav class="nav-overlay" role="navigation">
+  <div class="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="dessert-platters.html">Dessert Platters</a>
+    <a href="savoury-platters.html">Savoury Platters</a>
+    <a href="cakes.html">Cakes</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <span class="hero-tag">✦ DHA Phase 6, Lahore</span>
+        <div class="hero-brand">Maània</div>
+        <div class="hero-slogan">— for the love of food —</div>
+        <p class="hero-intro">
+          Real food. Made from scratch. Packed with nostalgia and stirred with love — right from our home kitchen to your table.
+        </p>
+        <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+          <a href="menu.html" class="btn btn-primary">View Full Menu</a>
+          <a href="#story" class="btn btn-outline">Our Story</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-logo-circle">
+          <!--
+            TO REPLACE: swap the div below with:
+            <img src="images/logo.png" alt="Maània logo" />
+          -->
+          <div class="hero-logo-placeholder">
+            <div class="lg-name">Maània</div>
+            <div class="lg-tag1">-home for desserts-</div>
+            <div class="lg-tag2">-home for food-</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LOCATION STRIP ===== -->
+  <div class="location-strip">
+    <div class="location-grid">
+      <div class="loc-item">
+        <div class="loc-icon">📍</div>
+        <div class="loc-label">Find us at</div>
+        <div class="loc-value">DHA Phase 6, Lahore</div>
+      </div>
+      <div class="loc-item">
+        <div class="loc-icon">🚗</div>
+        <div class="loc-label">Order Options</div>
+        <div class="service-badges">
+          <span class="service-badge">Pickup</span>
+          <span class="service-badge">Delivery</span>
+        </div>
+      </div>
+      <div class="loc-item">
+        <div class="loc-icon">💬</div>
+        <div class="loc-label">Order via WhatsApp</div>
+        <div class="loc-value">
+          <a href="https://wa.me/923018233229" target="_blank" style="color:#fff; text-decoration:underline;">0301 823 3229</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== OUR STORY ===== -->
+  <section class="section section-cream" id="story">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-img-wrap reveal">
+          <!--
+            TO REPLACE: swap the div below with:
+            <img src="images/story-photo.jpg" alt="Cooking with family" class="story-img" />
+          -->
+          <div class="story-img-placeholder">🍳</div>
+          <div class="story-accent"></div>
+        </div>
+        <div class="story-text reveal">
+          <span class="section-label">Our Story</span>
+          <h2 class="section-heading">Where it all began</h2>
+          <p>
+            Maània didn't start with a business plan. It started with a pandemic, a slow Tuesday, and a kitchen full of curious kids who wanted to help.
+          </p>
+          <p>
+            When Covid brought the world to a standstill, it gave us something rare — time. Time to cook together, to laugh over messy countertops, and to discover what home really tastes like. Our children, with their wonderfully different palates, became our most honest food critics. And somewhere between the flour-dusted weekends and the late-night experiments, Maània was born.
+          </p>
+          <blockquote class="quote">
+            "Food cooked at home carries something no restaurant can replicate — the hands that made it, and the love behind them."
+          </blockquote>
+          <p>
+            Being originally from Karachi, we knew something was missing in Lahore. No matter where we looked, we could never find proper <strong>Karachi-style kachoris with aloo bhaaji</strong> — the kind that takes you straight back to Sunday mornings and your grandmother's kitchen. So we made them ourselves. For the family. And then for everyone who felt the same way.
+          </p>
+          <p>
+            That longing for home, that chase for real flavour — it became the heart of Maània.
+          </p>
+          <a href="#signature" class="btn btn-gold" style="margin-top:1rem;">See Our Signature Dishes ↓</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SIGNATURE DISHES ===== -->
+  <section class="section section-sand" id="signature">
+    <div class="container text-center">
+      <span class="section-label">Made with love</span>
+      <h2 class="section-heading">Our Signature Dishes</h2>
+      <p class="section-sub">
+        Dishes that started as family favourites and became the soul of Maània. Every bite tells a story.
+      </p>
+
+      <div class="dishes-grid">
+
+        <!-- DISH 1: Kachori & Bhaaji -->
+        <div class="dish-card reveal">
+          <!--
+            TO REPLACE: remove the div below and add:
+            <img src="images/kachori-bhaaji.jpg" alt="Kachori and Bhaaji" class="dish-card-img" />
+          -->
+          <div class="dish-img-placeholder">
+            <span class="ph-icon">🥟</span>
+            <span class="ph-text">Replace with kachori-bhaaji.jpg</span>
+          </div>
+          <div class="dish-card-body">
+            <span class="dish-tag">⭐ Signature</span>
+            <h3>Kachori &amp; Aloo Bhaaji</h3>
+            <p>Crispy, flaky kachoris paired with a deeply spiced Karachi-style aloo bhaaji — the dish that started it all. Authentic, nostalgic, irreplaceable.</p>
+          </div>
+        </div>
+
+        <!-- DISH 2: NY Cheesecake -->
+        <div class="dish-card reveal">
+          <!--
+            TO REPLACE:
+            <img src="images/ny-cheesecake.jpg" alt="New York Cheesecake" class="dish-card-img" />
+          -->
+          <div class="dish-img-placeholder">
+            <span class="ph-icon">🍰</span>
+            <span class="ph-text">Replace with ny-cheesecake.jpg</span>
+          </div>
+          <div class="dish-card-body">
+            <span class="dish-tag">❤️ Customer Favourite</span>
+            <h3>New York Cheesecake</h3>
+            <p>Velvety smooth, perfectly dense, with that signature golden top. Our cheesecake is a love letter to the classic — baked from scratch, no shortcuts, no compromises.</p>
+          </div>
+        </div>
+
+        <!-- DISH 3: Chicken Lasagne -->
+        <div class="dish-card reveal">
+          <!--
+            TO REPLACE:
+            <img src="images/chicken-lasagne.jpg" alt="Chicken Lasagne" class="dish-card-img" />
+          -->
+          <div class="dish-img-placeholder">
+            <span class="ph-icon">🍝</span>
+            <span class="ph-text">Replace with chicken-lasagne.jpg</span>
+          </div>
+          <div class="dish-card-body">
+            <span class="dish-tag">🏡 Homemade Classic</span>
+            <h3>Chicken Lasagne</h3>
+            <p>Layers of slow-cooked chicken, rich béchamel, and perfectly seasoned tomato sauce — our lasagne is comfort food elevated to an art. Made in the same tray it's served in.</p>
+          </div>
+        </div>
+
+      </div>
+      <a href="menu.html" class="btn btn-primary">Explore Full Menu</a>
+    </div>
+  </section>
+
+  <!-- ===== HOME CONTACT STRIP ===== -->
+  <section class="home-contact">
+    <div class="container">
+      <h2 class="section-heading" style="color:#fff;">Get in Touch</h2>
+      <p>Place your order, ask a question, or just say hello — we'd love to hear from you.</p>
+      <div class="contact-pills">
+        <a href="https://www.instagram.com/maaniabysmh" target="_blank" class="contact-pill">
+          📸 &nbsp;@maaniabysmh
+        </a>
+        <a href="https://wa.me/923018233229" target="_blank" class="contact-pill">
+          💬 &nbsp;0301 823 3229
+        </a>
+        <a href="mailto:maaniabysmh@gmail.com" class="contact-pill">
+          ✉️ &nbsp;maaniabysmh@gmail.com
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>Made with <span>♥</span> by <strong style="color:rgba(255,255,255,0.8);">Maània</strong> &nbsp;·&nbsp; DHA Phase 6, Lahore &nbsp;·&nbsp; <a href="mailto:maaniabysmh@gmail.com">maaniabysmh@gmail.com</a></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
