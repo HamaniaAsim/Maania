@@ -567,6 +567,7 @@ main { padding-top: 70px; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: var(--radius-sm);
 }
 .menu-item-info { flex: 1; }
 .menu-item-info h4 { font-size: 1rem; margin-bottom: 0.25rem; }
@@ -811,6 +812,81 @@ footer span { color: var(--gold); }
 }
 .custom-banner h3 { color: #fff; font-size: 1.5rem; margin-bottom: 0.7rem; }
 .custom-banner p { opacity: 0.8; margin-bottom: 1.5rem; }
+
+/* ---- LIGHTBOX ---- */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  padding: 1.5rem;
+}
+.lightbox-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+.lightbox-inner {
+  position: relative;
+  max-width: 820px;
+  width: 100%;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+.lightbox-overlay.open .lightbox-inner {
+  transform: scale(1);
+}
+.lightbox-img {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  display: block;
+  background: #f5f5f5;
+}
+.lightbox-caption {
+  padding: 1.2rem 1.5rem;
+  background: var(--white);
+}
+.lightbox-caption h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+.lightbox-caption p {
+  font-size: 0.88rem;
+  color: var(--text-light);
+}
+.lightbox-close {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition);
+  z-index: 10;
+}
+.lightbox-close:hover { background: rgba(0,0,0,0.8); }
+
+.platter-card { cursor: pointer; }
+.platter-card-img { transition: transform 0.4s ease; }
+.platter-card:hover .platter-card-img { transform: scale(1.04); }
 
 /* ---- SCROLL REVEAL ANIMATION ---- */
 .reveal {
