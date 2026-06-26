@@ -44,21 +44,23 @@
 
       <div class="platters-grid">
 
-        <div class="platter-card reveal">
-          <img src="dessert-Platter.jpeg" alt="Sweet Bites Platter" class="platter-card-img" />
+        <div class="platter-card reveal" onclick="openLightbox('dessert-platter.jpeg', 'Sweet Bites Platter', 'A medley of our most-loved bite-sized desserts — brownies, mini cheesecake squares, and seasonal sweets.')">
+          <img src="dessert-platter.jpeg" alt="Sweet Bites Platter" class="platter-card-img" />
           <div class="platter-card-body">
             <span class="platter-size-badge">Small · 4–6 pax</span>
             <h3>Sweet Bites Platter</h3>
             <p>A medley of our most-loved bite-sized desserts — brownies, mini cheesecake squares, and seasonal sweets.</p>
+            <span style="font-size:0.8rem; color:var(--teal); font-weight:600; margin-top:0.5rem; display:block;">🔍 Tap to view full image</span>
           </div>
         </div>
 
-        <div class="platter-card reveal">
-          <img src="nutella-brownies.jpeg" alt="brownie boxr" class="platter-card-img" />
+        <div class="platter-card reveal" onclick="openLightbox('nutella-brownies.jpeg', 'Brownie Gift Box', 'Six fudgy signature brownies, beautifully gift-wrapped with a ribbon. Perfect for sending love.')">
+          <img src="nutella-brownies.jpeg" alt="brownie box" class="platter-card-img" />
           <div class="platter-card-body">
             <span class="platter-size-badge">Small · 4–6 pax</span>
             <h3>Brownie Gift Box</h3>
             <p>Six fudgy signature brownies, beautifully gift-wrapped with a ribbon. Perfect for sending love.</p>
+            <span style="font-size:0.8rem; color:var(--teal); font-weight:600; margin-top:0.5rem; display:block;">🔍 Tap to view full image</span>
           </div>
         </div>
 
@@ -84,6 +86,34 @@
   <p>Made with <span>♥</span> by <strong style="color:rgba(255,255,255,0.8);">Maània</strong> &nbsp;·&nbsp; DHA Phase 6, Lahore &nbsp;·&nbsp; <a href="mailto:maaniabysmh@gmail.com">maaniabysmh@gmail.com</a></p>
 </footer>
 
+<!-- LIGHTBOX -->
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+    <div class="lightbox-caption">
+      <h3 id="lightbox-title"></h3>
+      <p id="lightbox-desc"></p>
+    </div>
+  </div>
+</div>
+
 <script src="script.js"></script>
+<script>
+function openLightbox(src, title, desc) {
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox-title').textContent = title;
+  document.getElementById('lightbox-desc').textContent = desc;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox(e) {
+  if (!e || e.target === document.getElementById('lightbox') || e.target.classList.contains('lightbox-close')) {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(e); });
+</script>
 </body>
 </html>
