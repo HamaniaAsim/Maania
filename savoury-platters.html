@@ -107,7 +107,7 @@
 </footer>
 
 <!-- LIGHTBOX -->
-<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
+<div class="lightbox-overlay" id="lightbox">
   <div class="lightbox-inner">
     <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
     <img class="lightbox-img" id="lightbox-img" src="" alt="" />
@@ -127,13 +127,16 @@ function openLightbox(src, title, desc) {
   document.getElementById('lightbox').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
-function closeLightbox(e) {
-  if (!e || e.target === document.getElementById('lightbox') || e.target.classList.contains('lightbox-close')) {
-    document.getElementById('lightbox').classList.remove('open');
-    document.body.style.overflow = '';
-  }
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
 }
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(e); });
+document.getElementById('lightbox').addEventListener('click', function(e) {
+  if (e.target === this) closeLightbox();
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox();
+});
 </script>
 </body>
 </html>
